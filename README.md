@@ -19,13 +19,31 @@
     Module["Acrylic"].new(<Frame>);
 ```
 
+### Clear Acrylic
+```lua
+    Module["ClearAcrylic"]();
+```
+
 Example Create Acrylic:
 ```lua
     local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/DebugLibraryUIX/main/Library.lua"))();
     Module["Acrylic"].new(game:GetService("CoreGui"):WaitForChild("Debug"):WaitForChild("Frame"));
 ```
 
-### Clear Acrylic
+## Debug Library
+### Debug
 ```lua
-    Module["ClearAcrylic"]();
+    Module["Debug"](<Text>, <Type>)
+```
+
+### List of Type
+- "Error"
+- "Warn"
+- "Print"
+- "Secret"
+
+Example Debug
+```lua
+    local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/DebugLibraryUIX/main/Library.lua"))();
+    Module["Debug"]("Error: I dont know", "Warn");
 ```
