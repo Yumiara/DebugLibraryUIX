@@ -1261,7 +1261,7 @@ function HexaDebug(origin, value)
 
 	local HexVariable = {};
 	HexVariable["Copy"] = toclipboard or setclipboard or false;
-	HexVariable[1] = Debug or false;
+	HexVariable[1] = Debug;
 	HexVariable[2] = Debug:WaitForChild("Frame"):WaitForChild("Sidebar") or false;
 	HexVariable[3] = Debug:WaitForChild("Frame"):WaitForChild("Sidebar"):WaitForChild("TextButton") or false;
 	HexVariable[4] = Debug:WaitForChild("Temp"):WaitForChild("Execute") or false;
@@ -1818,7 +1818,6 @@ function HexaDebug(origin, value)
 		while task.wait() do
 			if not Debug or not Debug.Parent or not Debug:FindFirstChild("Frame") then break; end;
 			if holding and (tick() - startTime) >= 2.3 then 
-				print("a")
 				Debug.Enabled = not Debug.Enabled
 				repeat task.wait() until not holding
 			end;
@@ -1827,3 +1826,5 @@ function HexaDebug(origin, value)
 
 	return newModule;
 end;
+
+return HexaDebug();
