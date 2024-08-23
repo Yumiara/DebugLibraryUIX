@@ -11,6 +11,12 @@
     Module["Acrylic"].new(<Frame>);
 ```
 
+Example Create Acrylic:
+```lua
+    local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/DebugLibraryUIX/main/Library.lua"))();
+    Module["Acrylic"].new(game:GetService("CoreGui"):FindFirstChild("Debug"));
+```
+
 ### Clear Acrylic
 ```lua
     Module["ClearAcrylic"]();
