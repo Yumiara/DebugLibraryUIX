@@ -93,7 +93,7 @@ local TextButton_8 = Instance.new("TextButton")
 --Properties:
 
 Debug.Name = "Debug"
-Debug.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Debug.Parent = game:GetService("CoreGui");
 Debug.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = Debug
