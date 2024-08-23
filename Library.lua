@@ -1262,10 +1262,10 @@ function HexaDebug(origin, value)
 	local HexVariable = {};
 	HexVariable["Copy"] = toclipboard or setclipboard or false;
 	HexVariable[1] = Debug or false;
-	HexVariable[2] = origin:WaitForChild("Frame"):WaitForChild("Sidebar") or false;
-	HexVariable[3] = origin:WaitForChild("Frame"):WaitForChild("Sidebar"):WaitForChild("TextButton") or false;
-	HexVariable[4] = origin:WaitForChild("Temp"):WaitForChild("Execute") or false;
-	HexVariable[5] = origin:WaitForChild("Temp"):WaitForChild("Execute"):WaitForChild("TextButton") or false;
+	HexVariable[2] = Debug:WaitForChild("Frame"):WaitForChild("Sidebar") or false;
+	HexVariable[3] = Debug:WaitForChild("Frame"):WaitForChild("Sidebar"):WaitForChild("TextButton") or false;
+	HexVariable[4] = Debug:WaitForChild("Temp"):WaitForChild("Execute") or false;
+	HexVariable[5] = Debug:WaitForChild("Temp"):WaitForChild("Execute"):WaitForChild("TextButton") or false;
 	local HexVaFu = {};
 	HexVaFu[1] = function(object, properties, tweenInfo)
 		local a1 = ee:Create(object, tweenInfo, properties);
@@ -1827,8 +1827,3 @@ function HexaDebug(origin, value)
 
 	return newModule;
 end;
-
-local Module = HexaDebug(Debug);
-Module["Acrylic"].new(Debug:WaitForChild("Frame"));
-task.wait(2);
-Module["ClearAcrylic"]()
