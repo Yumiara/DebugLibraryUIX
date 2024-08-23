@@ -1379,16 +1379,20 @@ function HexaDebug(origin, value)
 		local textButton = Instance.new("TextButton");
 		textButton.Font = Enum.Font.Unknown;
 		textButton.Text = text;
-		if value == nil then
-			textButton.TextColor3 = Color3.fromRGB(255, 255, 255);
-		elseif value == "Error" then
-			textButton.TextColor3 = Color3.fromRGB(255, 0, 0);
-		elseif value == "Warn" then
-			textButton.TextColor3 = Color3.fromRGB(255, 255, 0);
-		elseif value == "Print" then
-			textButton.TextColor3 = Color3.fromRGB(255, 255, 255);
-		elseif value == "Secret" then
-			textButton.TextColor3 = Color3.fromRGB(170, 0, 255);
+		if typeof(value) == "Color3" then
+			textButton.TextColor3 = value;
+		else
+			if value == nil then
+				textButton.TextColor3 = Color3.fromRGB(255, 255, 255);
+			elseif value == "Error" then
+				textButton.TextColor3 = Color3.fromRGB(255, 0, 0);
+			elseif value == "Warn" then
+				textButton.TextColor3 = Color3.fromRGB(255, 255, 0);
+			elseif value == "Print" then
+				textButton.TextColor3 = Color3.fromRGB(255, 255, 255);
+			elseif value == "Secret" then
+				textButton.TextColor3 = Color3.fromRGB(170, 0, 255);
+			end;
 		end;
 		textButton.TextSize = tonumber(HexVariable[1]:WaitForChild("Frame"):WaitForChild("Console"):WaitForChild("Size").Text) or 9;
 		textButton.TextWrapped = true;
