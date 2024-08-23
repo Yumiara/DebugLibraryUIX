@@ -13,6 +13,11 @@
     local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/DebugLibraryUIX/main/Library.lua"))();
 ```
 
+## Hide TTJY's Debug
+```lua
+    game:GetService("CoreGui")["Debug"].Enabled = false
+```
+
 ## Acrylic Library
 ### Create Acrylic
 ```lua
