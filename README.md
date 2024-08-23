@@ -5,6 +5,14 @@
     local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/DebugLibraryUIX/main/Library.lua"))();
 ```
 
+## Reset/Create new
+```lua
+    if game:GetService("CoreGui"):FindFirstChild("Debug") then
+        game:GetService("CoreGui")["Debug"]:Destroy();
+    end;
+    local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/DebugLibraryUIX/main/Library.lua"))();
+```
+
 ## Acrylic Library
 ### Create Acrylic
 ```lua
